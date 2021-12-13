@@ -53,7 +53,18 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-
+        unordered_set<char> a;
+        int ans = 0;
+        int l = 0;
+        for (int r=0;r<s.size();r++) {
+          while (a.count(s[r])>0) {
+            a.erase(s[l]);
+            l++;
+          }
+          a.insert(s[r]);
+          ans = max(ans,r-l+1);
+        }
+        return ans;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
@@ -62,7 +73,7 @@ public:
 int main()
 {
     Solution s;
-    vector<int> data{7, 1, 5, 3, 6, 4};
-    auto res = "Hello LeetCode";
+    string str = "abcdabc";
+    auto res = s.lengthOfLongestSubstring(str);
     cout<<res<<endl;
 }
