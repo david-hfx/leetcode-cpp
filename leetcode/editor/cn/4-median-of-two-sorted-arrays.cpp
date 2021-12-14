@@ -63,17 +63,17 @@ using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 public:
-    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-
+    double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2) {
+        return 0.0;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-int main()
-{
-    Solution s;
-    vector<int> data{7, 1, 5, 3, 6, 4};
-    auto res = "Hello LeetCode";
-    cout<<res<<endl;
+int main() {
+//    Solution s;
+    vector<int> data{};
+    vector<int>::size_type m = data.size();
+    auto res = data[m/2];
+    cout << res << endl;
 }

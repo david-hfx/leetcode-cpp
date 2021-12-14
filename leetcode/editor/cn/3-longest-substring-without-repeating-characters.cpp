@@ -56,13 +56,13 @@ public:
         unordered_set<char> a;
         int ans = 0;
         int l = 0;
-        for (int r=0;r<s.size();r++) {
-          while (a.count(s[r])>0) {
-            a.erase(s[l]);
-            l++;
-          }
-          a.insert(s[r]);
-          ans = max(ans,r-l+1);
+        for (int r = 0; r < s.size(); r++) {
+            while (a.count(s[r]) > 0) {
+                a.erase(s[l]);
+                l++;
+            }
+            a.insert(s[r]);
+            ans = max(ans, r - l + 1);
         }
         return ans;
     }
@@ -70,10 +70,9 @@ public:
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-int main()
-{
+int main() {
     Solution s;
     string str = "abcdabc";
     auto res = s.lengthOfLongestSubstring(str);
-    cout<<res<<endl;
+    cout << res << endl;
 }
